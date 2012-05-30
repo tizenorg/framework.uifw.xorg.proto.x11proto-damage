@@ -7,6 +7,7 @@ Group:      Development/System
 License:    MIT
 URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/releases/individual/proto/damageproto-%{version}.tar.gz
+Source1001: packaging/xorg-x11-proto-damageproto.manifest 
 Provides:   damageproto
 BuildRequires: pkgconfig(xorg-macros)
 
@@ -21,6 +22,7 @@ Description: %{summary}
 
 
 %build
+cp %{SOURCE1001} .
 
 %reconfigure --disable-static \
     --libdir=%{_datadir}
@@ -38,6 +40,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest xorg-x11-proto-damageproto.manifest
 %defattr(-,root,root,-)
 %{_includedir}/X11/extensions/damageproto.h
 %{_includedir}/X11/extensions/damagewire.h
