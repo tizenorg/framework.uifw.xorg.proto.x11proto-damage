@@ -3,7 +3,7 @@ Name:       xorg-x11-proto-damageproto
 Summary:    X.Org X11 Protocol damageproto
 Version:    1.2.1
 Release:    1.5
-Group:      Development/System
+Group:      Graphics/X Window System
 License:    MIT
 URL:        http://www.x.org
 Source0:    %{name}-%{version}.tar.gz
